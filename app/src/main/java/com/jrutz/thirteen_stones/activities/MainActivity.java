@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.jrutz.thirteen_stones.R;
+import com.jrutz.thirteen_stones.lib.DialogUtils;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -48,10 +49,43 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id) {
+            case R.id.action_new_game:
+                startNextNewGame();
+                return true;
+            case R.id.action_statistics:
+                showStatistics();
+                return true;
+            case R.id.action_reset_stats:
+                // mGame.resetStatsistics();
+                return true;
+            case R.id.action_settings:
+                showSettings();
+                return true;
+            case R.id.action_about:
+                showAbout();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void startNextNewGame() {
+
+    }
+
+    private void showStatistics() {
+
+    }
+
+    private void showSettings() {
+
+    }
+
+    private void showAbout() {
+        DialogUtils.showInfoDialog(this, getString(R.string.about),
+                getString(R.string.about_desc));
+    }
+
+    
 }
