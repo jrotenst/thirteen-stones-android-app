@@ -1,5 +1,6 @@
 package com.jrutz.thirteen_stones.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -75,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showStatistics() {
-
+        Intent intent = new Intent(getApplicationContext(), StatisticsActivity.class);
+        startActivity(intent);
     }
 
     private void showSettings() {
