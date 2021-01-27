@@ -89,5 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 getString(R.string.about_desc));
     }
 
-    
+
+    public void pick123(View view) {
+        // handle clicks on 1, 2, and 3
+    }
 }
